@@ -23,7 +23,7 @@ def square(start, end):
 
 def circle(start, end):
     r = end.x-start.x
-    "Draw circle from start to end."
+    "Draw circle from start to end"
     up()
     goto(start.x, start.y)
     down()
