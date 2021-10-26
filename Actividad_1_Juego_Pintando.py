@@ -49,6 +49,7 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
+"El progrma regisrtra la tecla que se presióna y eso define la figura que se creará y su color"
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
