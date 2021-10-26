@@ -1,3 +1,14 @@
+# 26/10/2021
+# 01:01 pm
+
+# Juego que dibuja figuras y lineas en puntos especificados en un plano
+# Modificado por:
+# Gabriel Sebastián Garibay Dávila
+# Daniel Evaristo Escalera Bonilla
+# Francisco Cruz Vázquez
+# Juan Carlos Martínez Zacarías
+# Carmina López Palacios
+
 from turtle import *
 from freegames import vector
 
@@ -25,29 +36,29 @@ def circle(start, end):
     r = end.x-start.x
     "Draw circle from start to end"
     up()
-    goto(start.x, start.y)
+    goto(start.x, start.y) # Coloca la pluma en la posición inicial
     down()
     
     begin_fill()
-    right(90)
+    right(90) # Gira para mirar hacia abajo
     for count in range(360):
-        forward(r/45)
+        forward(r/45) # Crea 360 lineas de una fracción del radio con ángulos de 1°
         left(1)
         
-    left(90)
+    left(90) # Gira para reiniciar el cursor
     end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
     up()
-    goto(start.x, start.y)
+    goto(start.x, start.y) # Coloca la pluma en la posición inicial
     down()
     begin_fill()
 
     for count in range(2):
-        forward(end.x - start.x)
+        forward(end.x - start.x) # Crea la linea horizontal, gira 90°
         left(90)
-        forward(end.y - start.y)
+        forward(end.y - start.y) # Crea la linea vertical, gira 90°
         left(90)
 
     end_fill()
@@ -55,12 +66,12 @@ def rectangle(start, end):
 def triangle(start, end):
     "Draw triangle from start to end."
     up()
-    goto(start.x, start.y)
+    goto(start.x, start.y) # Coloca la pluma en la posición inicial
     down()
     begin_fill()
 
     for count in range(3):
-        forward(end.x - start.x)
+        forward(end.x - start.x) # Crea tres lineas de la medida especificada con ángulos de 120°
         left(120)
         
     end_fill()
@@ -81,7 +92,7 @@ def store(key, value):
     "Store value in state at key."
     state[key] = value
 
-"El progrma regisrtra la tecla que se presióna y eso define la figura que se creará y su color"
+"El progrma registra la tecla que se presióna y eso define la figura que se creará y su color"
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
@@ -91,9 +102,9 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('gray'), 'A')
+onkey(lambda: color('gray'), 'A') # Se agregó esta linea para incluir el color gris
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('yellow'), 'Y') #Se agregó esta línea para incluir el color amarillo
+onkey(lambda: color('yellow'), 'Y') # Se agregó esta línea para incluir el color amarillo
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
