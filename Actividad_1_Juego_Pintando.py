@@ -22,7 +22,6 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Comentario"
     "Draw circle from start to end."
     pass  # TODO
 
