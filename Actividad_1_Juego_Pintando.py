@@ -82,6 +82,7 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('blue'), 'B')
+onkey(lambda: color('gray'), 'A')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('yellow'), 'Y') #Se agregó esta línea para incluir el color amarillo
 onkey(lambda: store('shape', line), 'l')
