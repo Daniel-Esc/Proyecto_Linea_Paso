@@ -31,7 +31,7 @@ def circle(start, end):
     begin_fill()
     right(90)
     for count in range(360):
-        forward(r/90)
+        forward(r/45)
         left(1)
         
     left(90)
