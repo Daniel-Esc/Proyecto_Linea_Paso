@@ -59,6 +59,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+
 onkey(lambda: color('gray'), 'A')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
